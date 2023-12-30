@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 class FigureCalculator {
   constructor(mathBasic) {
     this._mathBasic = mathBasic;
