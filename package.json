@@ -1,11 +1,11 @@
 {
-  "name": "math-api",
+  "name": "math-api-tdd",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic Math API with Test-Driven Development",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --coverage",
-    "start": "node index.ts"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
