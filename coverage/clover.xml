@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1703936549352" clover="3.2.0">
-  <project timestamp="1703936549352" name="All files">
-    <metrics statements="67" coveredstatements="66" conditionals="49" coveredconditionals="48" methods="13" coveredmethods="13" elements="129" coveredelements="127" complexity="0" loc="67" ncloc="67" packages="1" files="3" classes="3"/>
+<coverage generated="1703936662083" clover="3.2.0">
+  <project timestamp="1703936662083" name="All files">
+    <metrics statements="70" coveredstatements="69" conditionals="49" coveredconditionals="48" methods="14" coveredmethods="14" elements="133" coveredelements="131" complexity="0" loc="70" ncloc="70" packages="1" files="3" classes="3"/>
     <file name="FigureCalculator.js" path="/home/abraham/My-Projects/math-api-tdd/src/FigureCalculator.js">
       <metrics statements="26" coveredstatements="25" conditionals="25" coveredconditionals="24" methods="5" coveredmethods="5"/>
       <line num="3" count="13" type="stmt"/>
@@ -52,20 +52,20 @@
       <line num="35" count="14" type="cond" truecount="4" falsecount="0"/>
       <line num="36" count="3" type="stmt"/>
       <line num="39" count="11" type="stmt"/>
-      <line num="42" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="42" count="14" type="cond" truecount="2" falsecount="0"/>
       <line num="43" count="4" type="stmt"/>
-      <line num="46" count="8" type="stmt"/>
-      <line num="48" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="46" count="10" type="stmt"/>
+      <line num="48" count="10" type="cond" truecount="4" falsecount="0"/>
       <line num="49" count="3" type="stmt"/>
-      <line num="52" count="5" type="stmt"/>
+      <line num="52" count="7" type="stmt"/>
       <line num="56" count="3" type="stmt"/>
     </file>
     <file name="createServer.js" path="/home/abraham/My-Projects/math-api-tdd/src/createServer.js">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="9" count="3" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="9" count="4" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
@@ -75,8 +75,11 @@
       <line num="32" count="1" type="stmt"/>
       <line num="33" count="1" type="stmt"/>
       <line num="34" count="1" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
+      <line num="41" count="1" type="stmt"/>
       <line num="42" count="1" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="48" count="4" type="stmt"/>
+      <line num="51" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

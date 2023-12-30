@@ -34,6 +34,15 @@ const createServer = ({ mathBasic }) => {
         return { value };
       },
     },
+    {
+      method: 'GET',
+      path: '/devide/{a}/{b}',
+      handler: (request) => {
+        const { a, b } = request.params;
+        const value = mathBasic.devide(Number(a), Number(b));
+        return { value };
+      },
+    },
   ]);
 
   return server;
