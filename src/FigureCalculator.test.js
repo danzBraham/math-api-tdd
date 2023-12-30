@@ -121,4 +121,42 @@ describe('A FigureCalculator', () => {
       expect(spyAdd).toHaveBeenCalledWith(30, base);
     });
   });
+
+  describe('A calculateTriangleArea function', () => {
+    it('should throw error when not given 2 parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateTriangleArea()).toThrow();
+      expect(() => figureCalculator.calculateTriangleArea(1)).toThrow();
+      expect(() => figureCalculator.calculateTriangleArea(1, 2, 3)).toThrow();
+      expect(() => figureCalculator.calculateTriangleArea(1, 2, 3, 4)).toThrow();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateTriangleArea('1', '2')).toThrow();
+      expect(() => figureCalculator.calculateTriangleArea(true, {})).toThrow();
+      expect(() => figureCalculator.calculateTriangleArea(null, false)).toThrow();
+    });
+
+    it('should return the correct value based on the perimeter of a square formula', () => {
+      // Arrange
+      const height = 10;
+      const base = 20;
+      const heightTimesBase = MathBasic.multiply(height, base);
+      const expectedAnswer = heightTimesBase / 2;
+      const spyMultiply = jest.spyOn(MathBasic, 'multiply');
+      const spyDevide = jest.spyOn(MathBasic, 'devide');
+      const figureCalculator = new FigureCalculator(MathBasic);
+
+      // Action
+      const result = figureCalculator.calculateTriangleArea(height, base);
+
+      // Assert
+      expect(result).toEqual(expectedAnswer);
+      expect(spyMultiply).toHaveBeenCalledWith(height, base);
+      expect(spyDevide).toHaveBeenCalledWith(heightTimesBase, 2);
+    });
+  });
 });

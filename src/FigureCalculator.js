@@ -45,7 +45,19 @@ class FigureCalculator {
     return this._mathBasic.add(this._mathBasic.add(sideA, sideB), base);
   }
 
-  calculateTriangleArea() {}
+  calculateTriangleArea(...args) {
+    if (args.length !== 2) {
+      throw new Error('function only accepts two parameters');
+    }
+
+    const [height, base] = args;
+
+    if (typeof height !== 'number' || typeof base !== 'number') {
+      throw new Error('function only accepts the number parameter');
+    }
+
+    return this._mathBasic.devide(this._mathBasic.multiply(height, base), 2);
+  }
 }
 
 module.exports = FigureCalculator;

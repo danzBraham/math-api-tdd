@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1703924616440" clover="3.2.0">
-  <project timestamp="1703924616440" name="All files">
-    <metrics statements="46" coveredstatements="45" conditionals="43" coveredconditionals="42" methods="9" coveredmethods="8" elements="98" coveredelements="95" complexity="0" loc="46" ncloc="46" packages="1" files="2" classes="2"/>
+<coverage generated="1703930060791" clover="3.2.0">
+  <project timestamp="1703930060791" name="All files">
+    <metrics statements="52" coveredstatements="51" conditionals="49" coveredconditionals="48" methods="9" coveredmethods="9" elements="110" coveredelements="108" complexity="0" loc="52" ncloc="52" packages="1" files="2" classes="2"/>
     <file name="FigureCalculator.js" path="/home/abraham/My-Projects/math-api-tdd/src/FigureCalculator.js">
-      <metrics statements="20" coveredstatements="19" conditionals="19" coveredconditionals="18" methods="5" coveredmethods="4"/>
-      <line num="3" count="10" type="stmt"/>
+      <metrics statements="26" coveredstatements="25" conditionals="25" coveredconditionals="24" methods="5" coveredmethods="5"/>
+      <line num="3" count="13" type="stmt"/>
       <line num="7" count="8" type="cond" truecount="2" falsecount="0"/>
       <line num="8" count="4" type="stmt"/>
       <line num="11" count="4" type="stmt"/>
@@ -23,7 +23,13 @@
       <line num="41" count="1" type="cond" truecount="4" falsecount="1"/>
       <line num="42" count="0" type="stmt"/>
       <line num="45" count="1" type="stmt"/>
-      <line num="51" count="1" type="stmt"/>
+      <line num="49" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="50" count="4" type="stmt"/>
+      <line num="53" count="4" type="stmt"/>
+      <line num="55" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="56" count="3" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="63" count="1" type="stmt"/>
     </file>
     <file name="MathBasic.js" path="/home/abraham/My-Projects/math-api-tdd/src/MathBasic.js">
       <metrics statements="26" coveredstatements="26" conditionals="24" coveredconditionals="24" methods="4" coveredmethods="4"/>
@@ -40,18 +46,18 @@
       <line num="22" count="6" type="cond" truecount="4" falsecount="0"/>
       <line num="23" count="3" type="stmt"/>
       <line num="26" count="3" type="stmt"/>
-      <line num="29" count="12" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="14" type="cond" truecount="2" falsecount="0"/>
       <line num="30" count="4" type="stmt"/>
-      <line num="33" count="8" type="stmt"/>
-      <line num="35" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="33" count="10" type="stmt"/>
+      <line num="35" count="10" type="cond" truecount="4" falsecount="0"/>
       <line num="36" count="3" type="stmt"/>
-      <line num="39" count="5" type="stmt"/>
-      <line num="42" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="7" type="stmt"/>
+      <line num="42" count="11" type="cond" truecount="2" falsecount="0"/>
       <line num="43" count="4" type="stmt"/>
-      <line num="46" count="6" type="stmt"/>
-      <line num="48" count="6" type="cond" truecount="4" falsecount="0"/>
+      <line num="46" count="7" type="stmt"/>
+      <line num="48" count="7" type="cond" truecount="4" falsecount="0"/>
       <line num="49" count="3" type="stmt"/>
-      <line num="52" count="3" type="stmt"/>
+      <line num="52" count="4" type="stmt"/>
       <line num="56" count="2" type="stmt"/>
     </file>
   </project>
