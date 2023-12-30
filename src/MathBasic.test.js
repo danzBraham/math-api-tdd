@@ -75,4 +75,25 @@ describe('A MathBasic', () => {
       expect(MathBasic.multiply(10, 7)).toEqual(70);
     });
   });
+
+  describe('A devide function', () => {
+    it('should throw error when not given 2 parameters', () => {
+      expect(() => MathBasic.devide()).toThrow();
+      expect(() => MathBasic.devide(1)).toThrow();
+      expect(() => MathBasic.devide(1, 2, 3)).toThrow();
+      expect(() => MathBasic.devide(1, 2, 3, 4)).toThrow();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      expect(() => MathBasic.devide('1', '2')).toThrow();
+      expect(() => MathBasic.devide(true, {})).toThrow();
+      expect(() => MathBasic.devide(null, false)).toThrow();
+    });
+
+    it('should return a - b when given two number parameters', () => {
+      expect(MathBasic.devide(6, 2)).toEqual(3);
+      expect(MathBasic.devide(20, 4)).toEqual(5);
+      expect(MathBasic.devide(100, 5)).toEqual(20);
+    });
+  });
 });
