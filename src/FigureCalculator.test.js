@@ -38,6 +38,8 @@ describe('A FigureCalculator', () => {
       // Arrange
       const length = 10;
       const width = 20;
+      const lengthPlusWidth = MathBasic.add(length, width);
+      const expectedAnswer = MathBasic.multiply(2, lengthPlusWidth);
       const spyAdd = jest.spyOn(MathBasic, 'add');
       const spyMultiply = jest.spyOn(MathBasic, 'multiply');
       const figureCalculator = new FigureCalculator(MathBasic);
@@ -46,9 +48,9 @@ describe('A FigureCalculator', () => {
       const result = figureCalculator.calculateRectanglePerimeter(length, width);
 
       // Assert
-      expect(result).toEqual(60);
+      expect(result).toEqual(expectedAnswer);
       expect(spyAdd).toHaveBeenCalledWith(length, width);
-      expect(spyMultiply).toHaveBeenCalledWith(2, 30);
+      expect(spyMultiply).toHaveBeenCalledWith(2, lengthPlusWidth);
     });
   });
 
@@ -74,6 +76,7 @@ describe('A FigureCalculator', () => {
       // Arrange
       const length = 10;
       const width = 20;
+      const expectedAnswer = MathBasic.multiply(length, width);
       const spyMultiply = jest.spyOn(MathBasic, 'multiply');
       const figureCalculator = new FigureCalculator(MathBasic);
 
@@ -81,7 +84,7 @@ describe('A FigureCalculator', () => {
       const result = figureCalculator.calculateRectangleArea(length, width);
 
       // Assert
-      expect(result).toEqual(200);
+      expect(result).toEqual(expectedAnswer);
       expect(spyMultiply).toHaveBeenCalledWith(length, width);
     });
   });
@@ -109,6 +112,8 @@ describe('A FigureCalculator', () => {
       const sideA = 10;
       const sideB = 20;
       const base = 20;
+      const sideAPlusSideB = MathBasic.add(sideA, sideB);
+      const expectedAnswer = MathBasic.add(sideAPlusSideB, base);
       const spyAdd = jest.spyOn(MathBasic, 'add');
       const figureCalculator = new FigureCalculator(MathBasic);
 
@@ -116,9 +121,9 @@ describe('A FigureCalculator', () => {
       const result = figureCalculator.calculateTrianglePerimeter(sideA, sideB, base);
 
       // Assert
-      expect(result).toEqual(50);
+      expect(result).toEqual(expectedAnswer);
       expect(spyAdd).toHaveBeenCalledWith(sideA, sideB);
-      expect(spyAdd).toHaveBeenCalledWith(30, base);
+      expect(spyAdd).toHaveBeenCalledWith(sideAPlusSideB, base);
     });
   });
 
@@ -145,7 +150,7 @@ describe('A FigureCalculator', () => {
       const height = 10;
       const base = 20;
       const heightTimesBase = MathBasic.multiply(height, base);
-      const expectedAnswer = heightTimesBase / 2;
+      const expectedAnswer = MathBasic.devide(heightTimesBase, 2);
       const spyMultiply = jest.spyOn(MathBasic, 'multiply');
       const spyDevide = jest.spyOn(MathBasic, 'devide');
       const figureCalculator = new FigureCalculator(MathBasic);
