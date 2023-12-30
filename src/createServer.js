@@ -16,6 +16,15 @@ const createServer = ({ mathBasic }) => {
         return { value };
       },
     },
+    {
+      method: 'GET',
+      path: '/substract/{a}/{b}',
+      handler: (request) => {
+        const { a, b } = request.params;
+        const value = mathBasic.substract(Number(a), Number(b));
+        return { value };
+      },
+    },
   ]);
 
   return server;

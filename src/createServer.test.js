@@ -24,4 +24,27 @@ describe('A HTTP Server', () => {
       expect(spyAdd).toHaveBeenCalledWith(a, b);
     });
   });
+
+  describe('When GET /substract', () => {
+    it('should respond with a status code of 200 and the payload value is subtraction result of a and b correctly', async () => {
+      // Arrange
+      const a = 12;
+      const b = 5;
+      const expectedAnswer = MathBasic.substract(a, b);
+      const spySubstract = jest.spyOn(MathBasic, 'substract');
+      const server = createServer({ mathBasic: MathBasic });
+
+      // Action
+      const response = await server.inject({
+        method: 'GET',
+        url: `/substract/${a}/${b}`,
+      });
+
+      // Assert
+      const responseJson = JSON.parse(response.payload);
+      expect(response.statusCode).toEqual(200);
+      expect(responseJson.value).toEqual(expectedAnswer);
+      expect(spySubstract).toHaveBeenCalledWith(a, b);
+    });
+  });
 });
