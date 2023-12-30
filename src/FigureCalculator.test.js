@@ -51,4 +51,38 @@ describe('A FigureCalculator', () => {
       expect(spyMultiply).toHaveBeenCalledWith(2, 30);
     });
   });
+
+  describe('A calculateRectangleArea function', () => {
+    it('should throw error when not given 2 parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateRectangleArea()).toThrow();
+      expect(() => figureCalculator.calculateRectangleArea(1)).toThrow();
+      expect(() => figureCalculator.calculateRectangleArea(1, 2, 3)).toThrow();
+      expect(() => figureCalculator.calculateRectangleArea(1, 2, 3, 4)).toThrow();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateRectangleArea('1', '2')).toThrow();
+      expect(() => figureCalculator.calculateRectangleArea(true, {})).toThrow();
+      expect(() => figureCalculator.calculateRectangleArea(null, false)).toThrow();
+    });
+
+    it('should return the correct value based on the perimeter of a square formula', () => {
+      // Arrange
+      const length = 10;
+      const width = 20;
+      const spyMultiply = jest.spyOn(MathBasic, 'multiply');
+      const figureCalculator = new FigureCalculator(MathBasic);
+
+      // Action
+      const result = figureCalculator.calculateRectangleArea(length, width);
+
+      // Assert
+      expect(result).toEqual(200);
+      expect(spyMultiply).toHaveBeenCalledWith(length, width);
+    });
+  });
 });
