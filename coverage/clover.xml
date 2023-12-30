@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1703937199202" clover="3.2.0">
-  <project timestamp="1703937199203" name="All files">
-    <metrics statements="73" coveredstatements="72" conditionals="49" coveredconditionals="48" methods="15" coveredmethods="15" elements="137" coveredelements="135" complexity="0" loc="73" ncloc="73" packages="1" files="3" classes="3"/>
+<coverage generated="1703937374937" clover="3.2.0">
+  <project timestamp="1703937374938" name="All files">
+    <metrics statements="76" coveredstatements="75" conditionals="49" coveredconditionals="48" methods="16" coveredmethods="16" elements="141" coveredelements="139" complexity="0" loc="76" ncloc="76" packages="1" files="3" classes="3"/>
     <file name="FigureCalculator.js" path="/home/abraham/My-Projects/math-api-tdd/src/FigureCalculator.js">
       <metrics statements="26" coveredstatements="25" conditionals="25" coveredconditionals="24" methods="5" coveredmethods="5"/>
-      <line num="3" count="14" type="stmt"/>
+      <line num="3" count="15" type="stmt"/>
       <line num="7" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="8" count="4" type="stmt"/>
       <line num="11" count="6" type="stmt"/>
       <line num="13" count="6" type="cond" truecount="4" falsecount="0"/>
       <line num="14" count="3" type="stmt"/>
       <line num="17" count="3" type="stmt"/>
-      <line num="21" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="22" count="4" type="stmt"/>
-      <line num="25" count="4" type="stmt"/>
-      <line num="27" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="25" count="6" type="stmt"/>
+      <line num="27" count="6" type="cond" truecount="4" falsecount="0"/>
       <line num="28" count="3" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
+      <line num="31" count="3" type="stmt"/>
       <line num="35" count="8" type="cond" truecount="2" falsecount="0"/>
       <line num="36" count="7" type="stmt"/>
       <line num="39" count="1" type="stmt"/>
@@ -46,12 +46,12 @@
       <line num="22" count="8" type="cond" truecount="4" falsecount="0"/>
       <line num="23" count="3" type="stmt"/>
       <line num="26" count="5" type="stmt"/>
-      <line num="29" count="20" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="22" type="cond" truecount="2" falsecount="0"/>
       <line num="30" count="4" type="stmt"/>
-      <line num="33" count="16" type="stmt"/>
-      <line num="35" count="16" type="cond" truecount="4" falsecount="0"/>
+      <line num="33" count="18" type="stmt"/>
+      <line num="35" count="18" type="cond" truecount="4" falsecount="0"/>
       <line num="36" count="3" type="stmt"/>
-      <line num="39" count="13" type="stmt"/>
+      <line num="39" count="15" type="stmt"/>
       <line num="42" count="14" type="cond" truecount="2" falsecount="0"/>
       <line num="43" count="4" type="stmt"/>
       <line num="46" count="10" type="stmt"/>
@@ -61,11 +61,11 @@
       <line num="56" count="3" type="stmt"/>
     </file>
     <file name="createServer.js" path="/home/abraham/My-Projects/math-api-tdd/src/createServer.js">
-      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="5" type="stmt"/>
-      <line num="9" count="5" type="stmt"/>
+      <line num="4" count="6" type="stmt"/>
+      <line num="9" count="6" type="stmt"/>
       <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
@@ -81,8 +81,11 @@
       <line num="50" count="1" type="stmt"/>
       <line num="51" count="1" type="stmt"/>
       <line num="52" count="1" type="stmt"/>
-      <line num="57" count="5" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
       <line num="60" count="1" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
+      <line num="66" count="6" type="stmt"/>
+      <line num="69" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
