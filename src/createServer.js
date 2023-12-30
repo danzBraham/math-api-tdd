@@ -9,6 +9,11 @@ const createServer = ({ mathBasic, figureCalculator }) => {
   server.route([
     {
       method: 'GET',
+      path: '/',
+      handler: () => ({ status: 'success', message: 'Welcome to Math-API-TDD' }),
+    },
+    {
+      method: 'GET',
       path: '/add/{a}/{b}',
       handler: (request) => {
         const { a, b } = request.params;
