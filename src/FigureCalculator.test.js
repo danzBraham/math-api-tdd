@@ -85,4 +85,40 @@ describe('A FigureCalculator', () => {
       expect(spyMultiply).toHaveBeenCalledWith(length, width);
     });
   });
+
+  describe('A calculateTrianglePerimeter function', () => {
+    it('should throw error when not given 3 parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateTrianglePerimeter()).toThrow();
+      expect(() => figureCalculator.calculateTrianglePerimeter(1)).toThrow();
+      expect(() => figureCalculator.calculateTrianglePerimeter(1, 2)).toThrow();
+      expect(() => figureCalculator.calculateTrianglePerimeter(1, 2, 3, 4)).toThrow();
+    });
+
+    it('should throw error when given non-number parameters', () => {
+      const figureCalculator = new FigureCalculator({});
+
+      expect(() => figureCalculator.calculateTrianglePerimeter('1', '2')).toThrow();
+      expect(() => figureCalculator.calculateTrianglePerimeter(true, {})).toThrow();
+      expect(() => figureCalculator.calculateTrianglePerimeter(null, false)).toThrow();
+    });
+
+    it('should return the correct value based on the perimeter of a square formula', () => {
+      // Arrange
+      const sideA = 10;
+      const sideB = 20;
+      const base = 20;
+      const spyAdd = jest.spyOn(MathBasic, 'add');
+      const figureCalculator = new FigureCalculator(MathBasic);
+
+      // Action
+      const result = figureCalculator.calculateTrianglePerimeter(sideA, sideB, base);
+
+      // Assert
+      expect(result).toEqual(50);
+      expect(spyAdd).toHaveBeenCalledWith(sideA, sideB);
+      expect(spyAdd).toHaveBeenCalledWith(30, base);
+    });
+  });
 });

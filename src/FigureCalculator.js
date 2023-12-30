@@ -31,7 +31,19 @@ class FigureCalculator {
     return this._mathBasic.multiply(length, width);
   }
 
-  calculateTrianglePerimeter() {}
+  calculateTrianglePerimeter(...args) {
+    if (args.length !== 3) {
+      throw new Error('function only accepts three parameters');
+    }
+
+    const [sideA, sideB, base] = args;
+
+    if (typeof sideA !== 'number' || typeof sideB !== 'number' || typeof base !== 'number') {
+      throw new Error('function only accepts the number parameter');
+    }
+
+    return this._mathBasic.add(this._mathBasic.add(sideA, sideB), base);
+  }
 
   calculateTriangleArea() {}
 }
